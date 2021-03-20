@@ -4,6 +4,7 @@
 import React from 'react'
 import { NextPage, GetStaticProps, GetStaticPaths } from 'next'
 import { Wrapper } from 'components/wrapper'
+import { Content } from 'components/content'
 import { getArticleById } from 'utils/helper'
 import { articles } from 'data/articles'
 import { Article } from 'utils/types'
@@ -21,13 +22,7 @@ type Props = {
 export const ArticleId: NextPage<Props> = (props) => (
   <div>
     <Wrapper>
-      <div>
-        <p>Article: {props.article.id}</p>
-        <h1>{props.article.title}</h1>
-      </div>
-      {props.article.content.map((p, i) => (
-        <p key={i}>{p}</p>
-      ))}
+      <Content content={props.article} />
     </Wrapper>
   </div>
 )

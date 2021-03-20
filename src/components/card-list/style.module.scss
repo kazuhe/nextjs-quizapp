@@ -1,3 +1,5 @@
+@import 'styles/_utils';
+
 .cardList {
   section {
     margin: 5rem 0 0;
@@ -20,11 +22,15 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 3rem -1rem 0;
+    margin: 0 -1rem;
   }
 
   li {
     padding: 0 1rem;
-    flex-basis: 50%;
+    margin: 3rem 0 0;
+    
+    @include mq(sm) {
+      flex-basis: 50%;
+    }
   }
 }
