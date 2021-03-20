@@ -14,55 +14,44 @@ export const Home = (): JSX.Element => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
-    <main>
-      <h1 className="title">
-        Welcome to <a href="https://nextjs.org">Next.js!</a>
-      </h1>
+    <h1 className="title">
+      Welcome to <a href="https://nextjs.org">Next.js!</a>
+    </h1>
 
-      <p className="description">
-        Get started by editing <code>pages/index.tsx</code>
-      </p>
+    <p className="description">
+      Get started by editing <code>pages/index.tsx</code>
+    </p>
 
-      <button
-        onClick={() => {
-          window.alert('With typescript and Jest')
-        }}
-      >
-        Test Button
-      </button>
+    <button
+      onClick={() => {
+        window.alert('With typescript and Jest')
+      }}
+    >
+      Test Button
+    </button>
 
-      <div className="grid">
-        <Card
-          link="https://nextjs.org/docs"
-          title="Documentation &rarr;"
-          text="Find in-depth information about Next.js features and API."
-        />
-        <Card
-          link="https://nextjs.org/docs"
-          title="Learn &rarr;"
-          text="Learn about Next.js in an interactive course with quizzes!"
-        />
-        <Card
-          link="https://nextjs.org/docs"
-          title="Examples &rarr;"
-          text="Discover and deploy boilerplate example Next.js projects."
-        />
-      </div>
-    </main>
+    <div className="grid">
+      <Card
+        link="https://nextjs.org/docs"
+        title="Documentation &rarr;"
+        text="Find in-depth information about Next.js features and API."
+      />
+      <Card
+        link="https://nextjs.org/docs"
+        title="Learn &rarr;"
+        text="Learn about Next.js in an interactive course with quizzes!"
+      />
+      <Card
+        link="https://nextjs.org/docs"
+        title="Examples &rarr;"
+        text="Discover and deploy boilerplate example Next.js projects."
+      />
+    </div>
 
     <style jsx>{`
       .container {
         min-height: 100vh;
         padding: 0 0.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      main {
-        padding: 5rem 0;
-        flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: center;

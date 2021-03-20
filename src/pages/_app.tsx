@@ -3,6 +3,7 @@
  */
 import React from 'react'
 import { AppProps } from 'next/app'
+import { Main } from 'components/main'
 import { Footer } from 'components/footer'
 import 'styles/globals.scss'
 
@@ -12,7 +13,9 @@ import 'styles/globals.scss'
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <>
-      <Component {...pageProps} />
+      <Main>
+        <Component {...pageProps} />
+      </Main>
       <Footer />
     </>
   )
