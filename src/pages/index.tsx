@@ -2,62 +2,56 @@
  * Import
  */
 import Head from 'next/head'
+import { Wrapper } from 'components/wrapper'
 import { Card } from 'components/card'
 
 /*
  * DOM
  */
 export const Home = (): JSX.Element => (
-  <div className="container">
-    <Head>
-      <title>Create Next App</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+  <div className="home">
+    <Wrapper>
+      <Head>
+        <title>Create Next App</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-    <h1 className="title">
-      Welcome to <a href="https://nextjs.org">Next.js!</a>
-    </h1>
+      <h1 className="title">
+        Welcome to <a href="https://nextjs.org">Next.js!</a>
+      </h1>
 
-    <p className="description">
-      Get started by editing <code>pages/index.tsx</code>
-    </p>
+      <p className="description">
+        Get started by editing <code>pages/index.tsx</code>
+      </p>
 
-    <button
-      onClick={() => {
-        window.alert('With typescript and Jest')
-      }}
-    >
-      Test Button
-    </button>
+      <button
+        onClick={() => {
+          window.alert('With typescript and Jest')
+        }}
+      >
+        Test Button
+      </button>
 
-    <div className="grid">
-      <Card
-        link="https://nextjs.org/docs"
-        title="Documentation &rarr;"
-        text="Find in-depth information about Next.js features and API."
-      />
-      <Card
-        link="https://nextjs.org/docs"
-        title="Learn &rarr;"
-        text="Learn about Next.js in an interactive course with quizzes!"
-      />
-      <Card
-        link="https://nextjs.org/docs"
-        title="Examples &rarr;"
-        text="Discover and deploy boilerplate example Next.js projects."
-      />
-    </div>
+      <div className="grid">
+        <Card
+          link="https://nextjs.org/docs"
+          title="Documentation &rarr;"
+          text="Find in-depth information about Next.js features and API."
+        />
+        <Card
+          link="https://nextjs.org/docs"
+          title="Learn &rarr;"
+          text="Learn about Next.js in an interactive course with quizzes!"
+        />
+        <Card
+          link="https://nextjs.org/docs"
+          title="Examples &rarr;"
+          text="Discover and deploy boilerplate example Next.js projects."
+        />
+      </div>
+    </Wrapper>
 
     <style jsx>{`
-      .container {
-        min-height: 100vh;
-        padding: 0 0.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
       a {
         color: inherit;
         text-decoration: none;
@@ -114,20 +108,6 @@ export const Home = (): JSX.Element => (
           width: 100%;
           flex-direction: column;
         }
-      }
-    `}</style>
-
-    <style jsx global>{`
-      html,
-      body {
-        padding: 0;
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-      }
-
-      * {
-        box-sizing: border-box;
       }
     `}</style>
   </div>
