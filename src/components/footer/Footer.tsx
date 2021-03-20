@@ -11,12 +11,11 @@ import styles from './style.module.scss'
 export const Footer: React.FC = () => (
   <footer className={styles.footer}>
     <a
-      href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+      href="https://github.com/kazuhe/nextjs-quizapp"
       target="_blank"
       rel="noopener noreferrer"
     >
-      Powered by{' '}
-      <Image src="/vercel.svg" alt="Vercel Logo" height={'32'} width={'64'} />
+      <Image src="/github-mark.svg" alt="github" height={30} width={30} />
     </a>
   </footer>
 )
