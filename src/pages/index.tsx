@@ -3,7 +3,8 @@
  */
 import Head from 'next/head'
 import { Wrapper } from 'components/wrapper'
-import { Card } from 'components/card'
+import { CardList } from 'components/card-list'
+import { articles } from 'data/articles'
 
 /*
  * DOM
@@ -32,22 +33,8 @@ export const Home = (): JSX.Element => (
         Test Button
       </button>
 
-      <div className="grid">
-        <Card
-          link="https://nextjs.org/docs"
-          title="Documentation &rarr;"
-          text="Find in-depth information about Next.js features and API."
-        />
-        <Card
-          link="https://nextjs.org/docs"
-          title="Learn &rarr;"
-          text="Learn about Next.js in an interactive course with quizzes!"
-        />
-        <Card
-          link="https://nextjs.org/docs"
-          title="Examples &rarr;"
-          text="Discover and deploy boilerplate example Next.js projects."
-        />
+      <div>
+        <CardList data={articles} />
       </div>
     </Wrapper>
 
@@ -91,23 +78,6 @@ export const Home = (): JSX.Element => (
         font-size: 1.1rem;
         font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
           DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-      }
-
-      .grid {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-
-        max-width: 800px;
-        margin-top: 3rem;
-      }
-
-      @media (max-width: 600px) {
-        .grid {
-          width: 100%;
-          flex-direction: column;
-        }
       }
     `}</style>
   </div>

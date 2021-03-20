@@ -1,0 +1,30 @@
+.cardList {
+  section {
+    margin: 5rem 0 0;
+  }
+
+  &_title {
+    text-align: center;
+    letter-spacing: 0.3rem;
+
+    h2 {
+      font-size: 2.1rem;
+    }
+    
+    p {
+      margin: .5rem 0 0;
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 3rem -1rem 0;
+  }
+
+  li {
+    padding: 0 1rem;
+    flex-basis: 50%;
+  }
+}
