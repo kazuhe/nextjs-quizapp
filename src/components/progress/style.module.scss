@@ -1,0 +1,54 @@
+.progress {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgb(160 166 179 / 30%);
+  letter-spacing: 1px;
+
+  &_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+  }
+
+  &_logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  &_body {
+    display: flex;
+    align-items: center;
+  }
+
+  &_value {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1;
+
+    > span {
+      letter-spacing: 0.3rem;
+    }
+  }
+
+  &_mater {
+    background: #e8e8e8;
+    border-radius: 8px;
+    width: 10rem;
+    height: 0.6rem;
+    position: relative;
+    margin: 0 2rem 0 0;
+
+    > div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 0.6rem;
+      border-radius: 8px;
+      background: var(--color-primary);
+    }
+  }
+}

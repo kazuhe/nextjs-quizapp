@@ -19,7 +19,7 @@ export type Props = {
  */
 export const Card: React.FC<Props> = (props) => (
   <Link href={props.link} passHref>
-    <a href="https://nextjs.org/docs" className={styles.card}>
+    <a className={styles.card}>
       <h3>{props.title}</h3>
       <p>{props.text}</p>
     </a>
