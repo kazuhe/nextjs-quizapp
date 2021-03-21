@@ -11,3 +11,10 @@ export type Articles = {
   section_subtitle: string
   section_contet: Article[]
 }[]
+
+export type Quiz = {
+  id: string
+  question: string
+  choices: string[]
+  answer: string
+}

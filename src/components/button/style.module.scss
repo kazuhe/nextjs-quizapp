@@ -1,0 +1,26 @@
+.button {
+  min-width: 30rem;
+  height: 60px;
+  border-radius: 30rem;
+  color: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  background: var(--color-primary);
+  font-size: 1.3rem;
+  padding: 0 3rem;
+  font-weight: 500;
+
+  &.isDisabled,
+  &:disabled {
+    pointer-events: none;
+    background: #c2c2c2;
+  }
+
+  &:hover {
+    opacity: .7;
+  }
+}

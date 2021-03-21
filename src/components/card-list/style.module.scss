@@ -28,7 +28,7 @@
   li {
     padding: 0 1rem;
     margin: 3rem 0 0;
-    
+
     @include mq(sm) {
       flex-basis: 50%;
     }
