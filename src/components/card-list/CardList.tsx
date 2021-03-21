@@ -2,7 +2,7 @@
  * Import
  */
 import React from 'react'
-import { Card } from 'components/card'
+import { CardContainer } from 'components/card'
 import { Articles } from 'utils/types'
 import styles from './style.module.scss'
 
@@ -27,7 +27,8 @@ export const CardList: React.FC<Props> = (props) => (
         <ul>
           {data.section_contet.map((data) => (
             <li key={data.id}>
-              <Card
+              <CardContainer
+                id={data.id}
                 link={`/articles/${data.id}`}
                 title={data.title}
                 text={data.introduction}

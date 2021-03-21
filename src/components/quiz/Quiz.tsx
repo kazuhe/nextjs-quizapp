@@ -111,7 +111,6 @@ export const QuizContainer: React.FC<ContainerProps> = (props) => {
   const isCorrect = useSelector(
     (state: RootState) => state.articles.isCorrect[props.articleId]
   )
-  console.log(isCorrect)
 
   return (
     <Quiz
