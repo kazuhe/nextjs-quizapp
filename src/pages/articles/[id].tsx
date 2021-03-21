@@ -1,11 +1,10 @@
 /*
  * Import
  */
-import React, { useState } from 'react'
+import React from 'react'
 import { NextPage, GetStaticProps, GetStaticPaths } from 'next'
 import { Wrapper } from 'components/wrapper'
 import { Content } from 'components/content'
-import { Button } from 'components/button'
 import { QuizContainer } from 'components/quiz'
 import { getArticleById } from 'utils/helper'
 import { articles } from 'data/articles'
@@ -14,9 +13,6 @@ import { Article } from 'utils/types'
 /*
  * Types
  */
-type ContainerProps = {
-  article: Article
-}
 type Props = {
   article: Article
   showQuiz: boolean
@@ -26,50 +22,17 @@ type Props = {
 /*
  * DOM
  */
-export const ArticleId: React.FC<Props> = (props) => (
+export const ArticleId: NextPage<Props> = (props) => (
   <div>
     <Wrapper>
       <Content content={props.article} />
-      <div className="button">
-        <Button label="クイズにチャレンジ" onClick={props.handleShowQuiz} />
-      </div>
-      {props.showQuiz ? (
-        <QuizContainer
-          articleId={props.article.id}
-          handleShowQuiz={props.handleShowQuiz}
-        />
-      ) : (
-        ''
-      )}
+      <QuizContainer
+        articleId={props.article.id}
+        handleShowQuiz={props.handleShowQuiz}
+      />
     </Wrapper>
-
-    <style jsx>{`
-      .button {
-        text-align: center;
-        margin: 5rem 0 0;
-      }
-    `}</style>
   </div>
 )
-
-/*
- * Container
- */
-export const ArticleIdContainer: NextPage<ContainerProps> = (props) => {
-  // クイズモーダル表示/非表示の状態管理
-  const [showQuiz, setShowQuiz] = useState(false)
-  const handleShowQuiz = () => {
-    setShowQuiz(!showQuiz)
-  }
-
-  return (
-    <ArticleId
-      article={props.article}
-      showQuiz={showQuiz}
-      handleShowQuiz={handleShowQuiz}
-    />
-  )
-}
 
 /*
  * Get static props
@@ -100,4 +63,4 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: false }
 }
 
-export default ArticleIdContainer
+export default ArticleId

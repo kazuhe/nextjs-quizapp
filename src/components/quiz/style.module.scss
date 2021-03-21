@@ -1,15 +1,17 @@
 .quiz {
-  position: fixed;
-  background: rgb(0 0 0 / 80%);
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-  z-index: 1;
+  &_modal {
+    position: fixed;
+    background: rgb(0 0 0 / 80%);
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    z-index: 1;
+  }
 
   &_inner {
     position: relative;
@@ -91,6 +93,11 @@
   }
 
   &_button {
+    text-align: center;
+    margin: 5rem 0 0;
+  }
+
+  &_answer {
     margin: 3rem 0 0;
   }
 }

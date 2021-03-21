@@ -1,6 +1,7 @@
 /*
  * Import
  */
+import { NextPage } from 'next'
 import Head from 'next/head'
 import { Wrapper } from 'components/wrapper'
 import { CardList } from 'components/card-list'
@@ -9,7 +10,7 @@ import { articles } from 'data/articles'
 /*
  * DOM
  */
-export const Home = (): JSX.Element => (
+export const Home: NextPage = () => (
   <div className="home">
     <Wrapper>
       <Head>
@@ -17,44 +18,14 @@ export const Home = (): JSX.Element => (
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1 className="title">
-        Welcome to <a href="https://nextjs.org">Next.js!</a>
-      </h1>
-
-      <p className="description">
-        Get started by editing <code>pages/index.tsx</code>
-      </p>
-
-      <button
-        onClick={() => {
-          window.alert('With typescript and Jest')
-        }}
-      >
-        Test Button
-      </button>
-
+      <h1 className="title">nextjs-quizapp</h1>
+      <p className="description">クイズは全て「Option A」が正解です。</p>
       <div>
         <CardList data={articles} />
       </div>
     </Wrapper>
 
     <style jsx>{`
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .title a {
-        color: #0070f3;
-        text-decoration: none;
-      }
-
-      .title a:hover,
-      .title a:focus,
-      .title a:active {
-        text-decoration: underline;
-      }
-
       .title {
         margin: 0;
         line-height: 1.15;
@@ -71,14 +42,8 @@ export const Home = (): JSX.Element => (
         font-size: 1.5rem;
       }
 
-      code {
-        background: #fafafa;
-        border-radius: 5px;
-        padding: 0.75rem;
-        font-size: 1.1rem;
-        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-      }
+      .button {
+        margin: 3rem 0 0;
     `}</style>
   </div>
 )
